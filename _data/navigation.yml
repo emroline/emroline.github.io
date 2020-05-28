@@ -1,0 +1,91 @@
+# main links
+main:
+  - title: Python
+    url: "/journals/python/"
+    description: "Learn Python Programming"
+  - title: Android
+    url: "/journals/android/"
+    description: "Learn Android Development"
+  - title: Flutter
+    url: "/journals/flutter/"
+    description: "Learn Flutter"
+  - title: Algorithms
+    url: "/journals/algorithms/"    
+  - title: Data Structures
+    url: "/journals/data-structures/"
+    description: "Learn about Data Structures"
+  - title: Space Science
+    url: "/journals/space-science/"
+    description: "Learn Space Science"
+
+
+  #- title:  "Home"
+  #  url:    "/"
+  #  description: "Emroline home page"
+  #- title:  "About"
+  #  url:    "/about"
+  #  description: "Know more about Emroline"
+  #- title:  "Tutorials"
+  #  children:
+  #    - title:  Python Tutorial
+  #- title:  "Courses"
+  #  url:    "/courses/"
+  #- title:  "Videos"
+  #  url:    "/videos/"
+  #- title:  "Store"
+  #  url:    "/store/"
+  #- title:  "Institutes"
+  #  url:    "/"
+  #- title:  "Online Certification"
+  #  url:    "/"
+  #- title:  "Find Jobs"
+  #  url:    "/"
+  #- title:  "Freelancing"
+  #  url:    "/"
+  #- title:  "Competitions"
+  #  url:    "/"
+
+home:
+  - title: Space Science
+    url: "/journals/space-science/"
+  - title: Python
+    url: "/journals/python/"
+  - title: Android
+    url: "/journals/android/"
+  - title: Flutter
+    url: "/journals/flutter/"
+  - title: Algorithms
+    url: "/journals/algorithms/"
+  - title: Data Structures
+    url: "/journals/data-structures/"
+  - title: Miscellaneous
+    url: "/journals/miscellaneous/"
+
+flutter:
+  - title: Flutter Tutorial
+    children:
+      - title: Flutter - Home
+        url: "/journals/flutter/"
+      - title: Flutter - Introduction
+        url: "/papers/introduction-to-flutter"
+      - title: Flutter - Advantages
+        url: "/papers/what-are-the-benefits-of-using-flutter"
+      #- title: Flutter - Installation
+      #  url: ""
+      - title: Flutter - Simple Application using Android Studio
+        url: "/papers/creating-a-simple-application-with-android-studio-and-flutter"
+      - title: Flutter - Architecture
+        url: "/papers/how-does-flutter-work"
+      - title: Introduction to Dart programming
+        url: "/papers/introduction-to-dart-programming"
+        
+
+  
+  - title: Flutter Examples
+    children:
+      - title:  Hello World App
+        url: "/papers/creating-a-simple-application-with-android-studio-and-flutter"
+      #- title:  Simple Todo App
+      #  url: "/papers/creating-a-todo-application-with-flutter-and-android-studio"
+
+        

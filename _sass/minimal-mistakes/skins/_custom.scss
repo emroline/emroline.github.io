@@ -1,0 +1,15 @@
+/* ==========================================================================
+   Custom skin
+   ========================================================================== */
+
+/* Colors */
+
+$footer-background-color: rgb(52, 54, 52) !default;
+$background-color: rgb(255, 255, 255) !default;
+.page__footer {
+  color: rgb(255, 255, 255) !important; // override
+}
+
+.page__footer-follow .social-icons .svg-inline--fa {
+  color: inherit;
+}

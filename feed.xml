@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://www.emroline.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.emroline.com/" rel="alternate" type="text/html" /><updated>2020-01-27T20:04:25+05:30</updated><id>https://www.emroline.com/feed.xml</id><title type="html">Emroline</title><subtitle>Explore And Learn Whatever You Want</subtitle><author><name>Emroline</name></author><entry><title type="html">How To Get User Input In Python</title><link href="https://www.emroline.com/papers/how-to-get-user-input-in-python" rel="alternate" type="text/html" title="How To Get User Input In Python" /><published>2020-01-27T00:00:00+05:30</published><updated>2020-01-27T00:00:00+05:30</updated><id>https://www.emroline.com/papers/how-to-get-user-input-in-python</id><content type="html" xml:base="https://www.emroline.com/papers/how-to-get-user-input-in-python">&lt;p&gt;While writing our Python programs, many times we need to get input from user. Python makes it very easy for us to get user input.&lt;/p&gt;
+
+&lt;p&gt;Python3 provides an inbuilt function to read input from keyboard.&lt;/p&gt;
+
+&lt;h3 id=&quot;inputprompt&quot;&gt;input(prompt)&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;input()&lt;/code&gt; function in Python takes exactly what is typed from our keyboard and returns it as a string. We can store the returned string in a variable(a named location in system’s memory) or use it right away without explicitly storing.&lt;/p&gt;
+
+&lt;p&gt;Following is a sample code snippet to demonstrate how &lt;code class=&quot;highlighter-rouge&quot;&gt;input()&lt;/code&gt; function can be used in our programs:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Python program to demonstrate use of input() function
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Any string supplied as parameter of input() function will appear a hint in terminal.
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user_input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Enter something&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user_input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; input() function in Python3 always returns a string. You  will have to convert the datatype in some use cases.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Following example shows how you can take integer input from user:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Python program to demonstrate use of input() function
+# and how to get integer input
+# Any string supplied as parameter of input() function will appear before the prompt in terminal.
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;integer_user_input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Enter some integer&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;integer_user_input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;integer_user_input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Converting string to integer
+&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;integer_user_input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# You can't add an string to an integer
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;integer_user_input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;how-the-input-function-works-in-python&quot;&gt;How the input function works in Python?&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;When the interpreter reaches the input() function, the program flow will be stopped until user has given an input.&lt;/li&gt;
+  &lt;li&gt;The programmer can supply some hint to the user by supplying some string in input() function, eg. &lt;code class=&quot;highlighter-rouge&quot;&gt;input(&quot;This is some hint&quot;)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Whatever you enter as input, the input() function will convert it to string. You will need to explicitly convert it into the appropriate datatype, using typecasting.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Example code to test input datatype:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Program to check the input data type Python
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Enter something...:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Printing the type of input
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Type of input stored in var variable&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>Emroline</name></author><summary type="html">While writing our Python programs, many times we need to get input from user. Python makes it very easy for us to get user input. Python3 provides an inbuilt function to read input from keyboard. input(prompt) input() function in Python takes exactly what is typed from our keyboard and returns it as a string. We can store the returned string in a variable(a named location in system’s memory) or use it right away without explicitly storing. Following is a sample code snippet to demonstrate how input() function can be used in our programs: # Python program to demonstrate use of input() function # Any string supplied as parameter of input() function will appear a hint in terminal. user_input = input(&quot;Enter something&quot;) print(user_input) Note: input() function in Python3 always returns a string. You will have to convert the datatype in some use cases. Following example shows how you can take integer input from user: # Python program to demonstrate use of input() function # and how to get integer input # Any string supplied as parameter of input() function will appear before the prompt in terminal. integer_user_input = input(&quot;Enter some integer&quot;) integer_user_input = int(integer_user_input) # Converting string to integer integer_user_input + 55 # You can't add an string to an integer print(integer_user_input) How the input function works in Python? When the interpreter reaches the input() function, the program flow will be stopped until user has given an input. The programmer can supply some hint to the user by supplying some string in input() function, eg. input(&quot;This is some hint&quot;) Whatever you enter as input, the input() function will convert it to string. You will need to explicitly convert it into the appropriate datatype, using typecasting. Example code to test input datatype: # Program to check the input data type Python var = input(&quot;Enter something...:&quot;) print(var) # Printing the type of input print(&quot;Type of input stored in var variable&quot;, type(var))</summary></entry><entry><title type="html">How To Pass Command Line Arguments In Python Using argparse Module</title><link href="https://www.emroline.com/papers/how-to-pass-command-line-arguments-in-python-using-argparse-module" rel="alternate" type="text/html" title="How To Pass Command Line Arguments In Python Using argparse Module" /><published>2020-01-27T00:00:00+05:30</published><updated>2020-01-27T00:00:00+05:30</updated><id>https://www.emroline.com/papers/how-to-pass-command-line-arguments-in-python-using-argparse-module</id><content type="html" xml:base="https://www.emroline.com/papers/how-to-pass-command-line-arguments-in-python-using-argparse-module">&lt;p&gt;Python provides an &lt;strong&gt;argparse&lt;/strong&gt; module, which makes it easy to write user-friendly command-line interfaces. In a program you can define the required arguments, and &lt;code class=&quot;highlighter-rouge&quot;&gt;argparse&lt;/code&gt; will figure out how to parse those arguments.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;argparse&lt;/code&gt; module also automatically generates help and usage messages and issue errors when users give the program invalid arguments.&lt;/p&gt;
+
+&lt;p&gt;Following is an example of how to use &lt;code class=&quot;highlighter-rouge&quot;&gt;argparse&lt;/code&gt; module in your program to pass parameters as command line arguments:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;argparse&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;parser&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argparse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ArgumentParser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;parser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;x&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;help&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;the base&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;parser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_argument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;y&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;help&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;the exponent&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse_args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{} to the power {} equals {}&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Some notes on above snippet:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;In  &lt;code class=&quot;highlighter-rouge&quot;&gt;import argparse&lt;/code&gt; is used to import the &lt;code class=&quot;highlighter-rouge&quot;&gt;argparse&lt;/code&gt; module in our script.&lt;/li&gt;
+  &lt;li&gt;We used &lt;code class=&quot;highlighter-rouge&quot;&gt;parser = argparse.ArgumentParser()&lt;/code&gt; to initiate a new object named &lt;code class=&quot;highlighter-rouge&quot;&gt;parser&lt;/code&gt; of type &lt;code class=&quot;highlighter-rouge&quot;&gt;argparse.ArgumentParser&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Then we add two arguments named &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;y&lt;/code&gt; using &lt;code class=&quot;highlighter-rouge&quot;&gt;add_argument&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now run the script as follows:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;go&quot;&gt;python3 sys_argv.py 10 2&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The output will be:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;go&quot;&gt;10 to the power 2 equals 100&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;argparse&lt;/code&gt; module provides inbuilt support for &lt;code class=&quot;highlighter-rouge&quot;&gt;--help&lt;/code&gt; argument, so if we execute the script like following:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;go&quot;&gt;python3 sys_argv.py --help&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The output will be:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;go&quot;&gt;usage: sys_argv.py [-h] x y
+
+positional arguments:
+  x           the base
+  y           the exponent
+
+optional arguments:
+  -h, --help  show this help message and exit&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>Emroline</name></author><summary type="html">Python provides an argparse module, which makes it easy to write user-friendly command-line interfaces. In a program you can define the required arguments, and argparse will figure out how to parse those arguments. The argparse module also automatically generates help and usage messages and issue errors when users give the program invalid arguments. Following is an example of how to use argparse module in your program to pass parameters as command line arguments: import argparse parser = argparse.ArgumentParser() parser.add_argument(&quot;x&quot;, type=int, help=&quot;the base&quot;) parser.add_argument(&quot;y&quot;, type=int, help=&quot;the exponent&quot;) args = parser.parse_args() answer = args.x**args.y print(&quot;{} to the power {} equals {}&quot;.format(args.x, args.y, answer)) Some notes on above snippet: In import argparse is used to import the argparse module in our script. We used parser = argparse.ArgumentParser() to initiate a new object named parser of type argparse.ArgumentParser. Then we add two arguments named x and y using add_argument. Now run the script as follows: python3 sys_argv.py 10 2 The output will be: 10 to the power 2 equals 100 The argparse module provides inbuilt support for --help argument, so if we execute the script like following: python3 sys_argv.py --help The output will be: usage: sys_argv.py [-h] x y positional arguments: x the base y the exponent optional arguments: -h, --help show this help message and exit</summary></entry><entry><title type="html">How Does Flutter Work</title><link href="https://www.emroline.com/papers/how-does-flutter-work" rel="alternate" type="text/html" title="How Does Flutter Work" /><published>2020-01-23T00:00:00+05:30</published><updated>2020-01-23T00:00:00+05:30</updated><id>https://www.emroline.com/papers/how-does-flutter-work</id><content type="html" xml:base="https://www.emroline.com/papers/how-does-flutter-work">&lt;p&gt;This is a high level overview of how the flutter works under the hood.&lt;/p&gt;
+
+&lt;p&gt;Flutter app is composed of &lt;strong&gt;Widgets&lt;/strong&gt;(Stateless of Stateful), that are rendered on a Skia canvas, and sent to the platform. The platform shows the canvas, and sends events back as required.&lt;/p&gt;
+
+&lt;p class=&quot;text-center&quot;&gt;
+&lt;img src=&quot;/assets/images/flutter_working.png&quot; alt=&quot;&quot; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&quot;widgets&quot;&gt;Widgets&lt;/h3&gt;
+&lt;p&gt;The central idea behind Flutter is that, &lt;strong&gt;In Flutter, Everything is a widget&lt;/strong&gt;. The entire UI is build by combining different widgets.&lt;/p&gt;
+
+&lt;p&gt;A widget can define:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;a structural element (like a button or menu)&lt;/li&gt;
+  &lt;li&gt;a stylistic element (like a font or color scheme)&lt;/li&gt;
+  &lt;li&gt;an aspect of layout (like padding)&lt;/li&gt;
+  &lt;li&gt;and so on…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The application is itself a widget. The application is the top-level widget which is composed of one or more children widgets, which again are composed of children widgets. This feature enables us to create a UI of any complexity.&lt;/p&gt;
+
+&lt;p&gt;Following is the widget hierarchy of a simple Hello World &lt;a href=&quot;https://www.emroline.com/papers/creating-a-simple-application-with-android-studio-and-flutter&quot;&gt;application&lt;/a&gt;:&lt;/p&gt;
+&lt;p class=&quot;text-center&quot;&gt;
+&lt;img src=&quot;/assets/images/flutter_widget_hierarchy.png&quot; alt=&quot;&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Note some points about above hierarchy:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;MyApp is the top-level widget. Its created by user and build uing the Flutter native widget, MaterialApp.&lt;/li&gt;
+  &lt;li&gt;MaterialApp has home property to specify the UI of home page, which is also a used created widget, MyHomePage.&lt;/li&gt;
+  &lt;li&gt;MyHomePage is build using flutter native widget, Scaffold.&lt;/li&gt;
+  &lt;li&gt;Header UI is build using flutter native widget, AppBar.&lt;/li&gt;
+  &lt;li&gt;Body Ui is build using Center widget.&lt;/li&gt;
+  &lt;li&gt;The Center widget has a property called Child, which is build using Text widget.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;gestures&quot;&gt;Gestures&lt;/h3&gt;
+&lt;p&gt;Flutter widgets support user interaction using GestureDetector widget. Its an invisible widget which can capture user interactions such as tap, drag, etc of its child widget. We can incorporate interactive features into a widget by composing it with GestureDetector widget.&lt;/p&gt;
+
+&lt;h3 id=&quot;concept-of-state&quot;&gt;Concept of State&lt;/h3&gt;
+&lt;p&gt;Flutter widgets support State maintenance by using StatefulWidget. Widget needs to be derived from StatefulWidget to support state maintenance. StatefulWidget will be auto re- rendered whenever its internal state is changed. The re-rendering is optimized by finding the difference between old and new widget UI and rendering only the necessary changes.&lt;/p&gt;
+
+&lt;p&gt;Flutter doesn’t use OEM widgets, but provides developers with its own ready-made widgets that look native to Android or iOS apps (following Material Design or Cupertino). Developers can create their own widgets as well.&lt;/p&gt;
+
+&lt;p&gt;Flutter also provides developers with reactive-style views. To avoid performance issues deriving from using a compiled programming language to serve as the JavaScript bridge, Flutter uses Dart. It compiles Dart ahead of time (AOT) into the native code for multiple platforms.&lt;/p&gt;
+
+&lt;p&gt;That way, Flutter can easily communicate with the platform without needing a JavaScript bridge that involves a context switch between the JavaScript realm and the native realm. Compiling to native code also boosts the app startup time.&lt;/p&gt;
+
+&lt;p&gt;So those were some points about how Flutter works under the hood.&lt;/p&gt;</content><author><name>Emroline</name></author><summary type="html">This is a high level overview of how the flutter works under the hood. Flutter app is composed of Widgets(Stateless of Stateful), that are rendered on a Skia canvas, and sent to the platform. The platform shows the canvas, and sends events back as required. Widgets The central idea behind Flutter is that, In Flutter, Everything is a widget. The entire UI is build by combining different widgets. A widget can define: a structural element (like a button or menu) a stylistic element (like a font or color scheme) an aspect of layout (like padding) and so on… The application is itself a widget. The application is the top-level widget which is composed of one or more children widgets, which again are composed of children widgets. This feature enables us to create a UI of any complexity. Following is the widget hierarchy of a simple Hello World application: Note some points about above hierarchy: MyApp is the top-level widget. Its created by user and build uing the Flutter native widget, MaterialApp. MaterialApp has home property to specify the UI of home page, which is also a used created widget, MyHomePage. MyHomePage is build using flutter native widget, Scaffold. Header UI is build using flutter native widget, AppBar. Body Ui is build using Center widget. The Center widget has a property called Child, which is build using Text widget. Gestures Flutter widgets support user interaction using GestureDetector widget. Its an invisible widget which can capture user interactions such as tap, drag, etc of its child widget. We can incorporate interactive features into a widget by composing it with GestureDetector widget. Concept of State Flutter widgets support State maintenance by using StatefulWidget. Widget needs to be derived from StatefulWidget to support state maintenance. StatefulWidget will be auto re- rendered whenever its internal state is changed. The re-rendering is optimized by finding the difference between old and new widget UI and rendering only the necessary changes. Flutter doesn’t use OEM widgets, but provides developers with its own ready-made widgets that look native to Android or iOS apps (following Material Design or Cupertino). Developers can create their own widgets as well. Flutter also provides developers with reactive-style views. To avoid performance issues deriving from using a compiled programming language to serve as the JavaScript bridge, Flutter uses Dart. It compiles Dart ahead of time (AOT) into the native code for multiple platforms. That way, Flutter can easily communicate with the platform without needing a JavaScript bridge that involves a context switch between the JavaScript realm and the native realm. Compiling to native code also boosts the app startup time. So those were some points about how Flutter works under the hood.</summary></entry><entry><title type="html">Introduction To Dart Programming</title><link href="https://www.emroline.com/papers/introduction-to-dart-programming" rel="alternate" type="text/html" title="Introduction To Dart Programming" /><published>2020-01-23T00:00:00+05:30</published><updated>2020-01-23T00:00:00+05:30</updated><id>https://www.emroline.com/papers/introduction-to-dart-programming</id><content type="html" xml:base="https://www.emroline.com/papers/introduction-to-dart-programming">&lt;p class=&quot;text-center&quot;&gt;
+&lt;img src=&quot;/assets/images/dart-logo.png&quot; alt=&quot;Dart Logo&quot; /&gt;
+&lt;/p&gt;
+&lt;p&gt;Dart is an open-source general-purpose programming language. Dart is an object oriented language.&lt;/p&gt;
+
+&lt;p&gt;Following is a simple Dart program that prints some text:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-dart&quot; data-lang=&quot;dart&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hey, you are learning Dart!&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Every Dart app has a main() function.&lt;/li&gt;
+  &lt;li&gt;print() is a top-level function in Dart, that can be used to print on console.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;variables-and-data-types&quot;&gt;Variables and Data types&lt;/h3&gt;
+&lt;p&gt;Variable is a named storage location in the memory. Dart supports type inference. So even in type-safe Dart code, most variables don’t need explicit types.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-dart&quot; data-lang=&quot;dart&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// var keyword is used to declare a variable&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Voyager I&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//String&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;year&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1977&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Integer&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;antennaDiameter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;3.7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Double&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flybyObjects&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Jupiter'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Saturn'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Uranus'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Neptune'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//List&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'tags'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'saturn'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'url'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'//path/to/saturn.jpg'&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// final and const keywords are used to declare constants&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pi&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;3.14&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Data types supported in Dart:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Numbers - Use to represent numeric literals - Integer and Double&lt;/li&gt;
+  &lt;li&gt;Strings - Sequence of characters&lt;/li&gt;
+  &lt;li&gt;Booleans - used to represent a Boolean values - true and false&lt;/li&gt;
+  &lt;li&gt;Lists and Maps - Collection of objects.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Dart does not support arrays. Dart collections can be used to replicate data structures such as arrays, generics, and optional typing.&lt;/p&gt;
+
+&lt;h3 id=&quot;control-flow-statements&quot;&gt;Control flow statements&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-dart&quot; data-lang=&quot;dart&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mass&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;23007&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mass&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Planet is heavy&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mass&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Planet is very heavy&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Planet is not heavy&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;planets&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Jupiter'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Saturn'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Uranus'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Neptune'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;planet&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;planets&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;planet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;year&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2020&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2030&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;year&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;functions&quot;&gt;Functions&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-dart&quot; data-lang=&quot;dart&quot;&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fibonacci&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibonacci&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibonacci&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fibonacci&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;A shorthand =&amp;gt; (arrow) syntax is handy for functions that contain a single statement. This syntax is especially useful when passing anonymous functions as arguments:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-dart&quot; data-lang=&quot;dart&quot;&gt;&lt;span class=&quot;n&quot;&gt;flybyObjects&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;containe&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'turn'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;In Dart a function can be used as an argument.&lt;/p&gt;
+
+&lt;h3 id=&quot;comments&quot;&gt;Comments&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-dart&quot; data-lang=&quot;dart&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// This is a normal, one-line comment.&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;/// This is a documentation comment.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;/// Tools like IDEs and dartdoc treat&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;/// doc comments specially.&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/* Comments like these are also supported. */&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;how-to-import&quot;&gt;How to import&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-dart&quot; data-lang=&quot;dart&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Importing core libraries&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'dart:math'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Importing libraries from external packages&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:test/test.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Importing files&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'path/to/my_other_file.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;object-oriented-programming&quot;&gt;Object Oriented Programming&lt;/h3&gt;
+&lt;p&gt;Dart is object-oriented language and supports object-oriented programming features like classes, interfaces, etc.&lt;/p&gt;
+
+&lt;p&gt;A class is a blueprint for creating objects.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-dart&quot; data-lang=&quot;dart&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Student&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;//getter method&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;student_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;//setter method&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;student_name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;//function definition&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//creating object&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Student&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stud&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Student&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;stud&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;student1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;stud&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//function call&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>Emroline</name></author><summary type="html">Dart is an open-source general-purpose programming language. Dart is an object oriented language. Following is a simple Dart program that prints some text: void main() { print(&quot;Hey, you are learning Dart!&quot;); } Every Dart app has a main() function. print() is a top-level function in Dart, that can be used to print on console. Variables and Data types Variable is a named storage location in the memory. Dart supports type inference. So even in type-safe Dart code, most variables don’t need explicit types. void main() { // var keyword is used to declare a variable var name = &quot;Voyager I&quot;; //String var year = 1977; //Integer var antennaDiameter = 3.7; //Double var flybyObjects = ['Jupiter', 'Saturn', 'Uranus', 'Neptune']; //List var image = { 'tags': ['saturn'], 'url': '//path/to/saturn.jpg' }; // final and const keywords are used to declare constants final a = 12; const pi = 3.14; } Data types supported in Dart: Numbers - Use to represent numeric literals - Integer and Double Strings - Sequence of characters Booleans - used to represent a Boolean values - true and false Lists and Maps - Collection of objects. Note: Dart does not support arrays. Dart collections can be used to replicate data structures such as arrays, generics, and optional typing. Control flow statements void main() { var mass = 23007 if (mass &amp;gt;= 100000) { print(&quot;Planet is heavy&quot;); } else if (mass &amp;gt;= 200000) { print(&quot;Planet is very heavy&quot;); } else { print(&quot;Planet is not heavy&quot;); } var planets = ['Jupiter', 'Saturn', 'Uranus', 'Neptune']; for (var planet in planets) { print(planet); } for (int month = 1; month &amp;lt;=12; month++) { print(month); } var year = 2020; while (year &amp;lt; 2030) { year += 1; print(year); } } Functions int fibonacci(int n) { if (n == 0 || n == 1) return n; return fibonacci(n - 1) + fibonacci(n - 2); } var result = fibonacci(20); A shorthand =&amp;gt; (arrow) syntax is handy for functions that contain a single statement. This syntax is especially useful when passing anonymous functions as arguments: flybyObjects.where((name) ==&amp;gt; name.containe('turn')).forEach(print); In Dart a function can be used as an argument. Comments // This is a normal, one-line comment. /// This is a documentation comment. /// Tools like IDEs and dartdoc treat /// doc comments specially. /* Comments like these are also supported. */ How to import // Importing core libraries import 'dart:math'; // Importing libraries from external packages import 'package:test/test.dart'; // Importing files import 'path/to/my_other_file.dart'; Object Oriented Programming Dart is object-oriented language and supports object-oriented programming features like classes, interfaces, etc. A class is a blueprint for creating objects. class Student { String name; //getter method String get student_name { return name; } //setter method String set student_name(String name) { this.name = name; } //function definition void result() { print(name); } } void main() { //creating object Student stud = new Student(); stud.name = &quot;student1&quot;; stud.result(); //function call }</summary></entry><entry><title type="html">What Are The Benefits Of Using Flutter</title><link href="https://www.emroline.com/papers/what-are-the-benefits-of-using-flutter" rel="alternate" type="text/html" title="What Are The Benefits Of Using Flutter" /><published>2020-01-23T00:00:00+05:30</published><updated>2020-01-23T00:00:00+05:30</updated><id>https://www.emroline.com/papers/what-are-the-benefits-of-using-flutter</id><content type="html" xml:base="https://www.emroline.com/papers/what-are-the-benefits-of-using-flutter">&lt;p class=&quot;text-center&quot;&gt;
+&lt;img src=&quot;/assets/images/flutter-logo.png&quot; alt=&quot;Flutter Logo&quot; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&quot;flutter-saves-your-time-and-money&quot;&gt;Flutter saves your time and money&lt;/h3&gt;
+&lt;p&gt;Flutter is a cross-platform development tool. That means once you build your application using Flutter, you can use the same code base to build app for iOS and Android. Cross-platform development saves your time and resources throught the development process.&lt;/p&gt;
+
+&lt;h3 id=&quot;flutter-offers-excellent-performance&quot;&gt;Flutter offers excellent performance&lt;/h3&gt;
+&lt;p&gt;First, Flutter uses Dart, which compiles into native code. And second, flutter has its own widgets, so you don’t need to access OEM ones. These two features ensure fewer performance issues and fast app startup.&lt;/p&gt;
+
+&lt;h3 id=&quot;flutter-enables-quick-development-thanks-to-hot-reload&quot;&gt;Flutter enables quick development thanks to hot reload&lt;/h3&gt;
+&lt;p&gt;If you have used Android Studio you know how slow development could be. Every time you want to see the changes you made in code, you have to rebuild the application, which take too much time. Flutter’s hot reload allows you to instantly view the changes applied to the code. Developers don’t need to waste their time on restarting the application each time. That makes building UI, adding new features, and fixing bugs a lot easier.&lt;/p&gt;
+
+&lt;h3 id=&quot;flutter-comes-will-lots-of-ready-to-use-widgets&quot;&gt;Flutter comes will lots of ready-to-use widgets&lt;/h3&gt;
+&lt;p&gt;Using Flutter’s widgets you don’t have to worry much about compatibility issues on various OS versions. And you can be confident that your app will work on future OS versions.&lt;/p&gt;
+
+&lt;p&gt;Flutter uses Dart language which with a &lt;a href=&quot;https://pub.dev/flutter/packages&quot;&gt;large repository&lt;/a&gt; of software packages for extending the capabilities of apps.&lt;/p&gt;
+
+&lt;h3 id=&quot;flutter-is-open-source&quot;&gt;Flutter is Open-Source&lt;/h3&gt;
+&lt;p&gt;Flutter is an open-source development framework with a very active community of developers. That means whenever you face a problem, you will always get an answer when you search online because lots of other developers have already faced that same problem.&lt;/p&gt;
+
+&lt;p&gt;Flutter is one of the most efficient mobile development framework and the advantages it brings to developers, make it a promising candidate for your app development stack.&lt;/p&gt;</content><author><name>Emroline</name></author><summary type="html">Flutter saves your time and money Flutter is a cross-platform development tool. That means once you build your application using Flutter, you can use the same code base to build app for iOS and Android. Cross-platform development saves your time and resources throught the development process. Flutter offers excellent performance First, Flutter uses Dart, which compiles into native code. And second, flutter has its own widgets, so you don’t need to access OEM ones. These two features ensure fewer performance issues and fast app startup. Flutter enables quick development thanks to hot reload If you have used Android Studio you know how slow development could be. Every time you want to see the changes you made in code, you have to rebuild the application, which take too much time. Flutter’s hot reload allows you to instantly view the changes applied to the code. Developers don’t need to waste their time on restarting the application each time. That makes building UI, adding new features, and fixing bugs a lot easier. Flutter comes will lots of ready-to-use widgets Using Flutter’s widgets you don’t have to worry much about compatibility issues on various OS versions. And you can be confident that your app will work on future OS versions. Flutter uses Dart language which with a large repository of software packages for extending the capabilities of apps. Flutter is Open-Source Flutter is an open-source development framework with a very active community of developers. That means whenever you face a problem, you will always get an answer when you search online because lots of other developers have already faced that same problem. Flutter is one of the most efficient mobile development framework and the advantages it brings to developers, make it a promising candidate for your app development stack.</summary></entry><entry><title type="html">Creating A Simple “Hello World” Application With Android Studio And Flutter</title><link href="https://www.emroline.com/papers/creating-a-simple-application-with-android-studio-and-flutter" rel="alternate" type="text/html" title="Creating A Simple &quot;Hello World&quot; Application With Android Studio And Flutter" /><published>2020-01-22T00:00:00+05:30</published><updated>2020-01-22T00:00:00+05:30</updated><id>https://www.emroline.com/papers/creating-a-simple-application-with-android-studio-and-flutter</id><content type="html" xml:base="https://www.emroline.com/papers/creating-a-simple-application-with-android-studio-and-flutter">&lt;p&gt;Here we will create a simple application using Flutter and Android Studio. The link to the source code repo is at the bottom of this page.&lt;/p&gt;
+
+&lt;p&gt;Following are the required steps:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Open Android Studio.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; To create Flutter Project click &lt;strong&gt;File&lt;/strong&gt; -&amp;gt; &lt;strong&gt;New&lt;/strong&gt; -&amp;gt; &lt;strong&gt;New Flutter Project&lt;/strong&gt;
+&lt;img src=&quot;/assets/images/new_flutter_project.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Select &lt;strong&gt;Flutter Application&lt;/strong&gt; and click &lt;strong&gt;Next&lt;/strong&gt;.
+&lt;img src=&quot;/assets/images/flutter_application_next.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 4.&lt;/strong&gt; Configure the application as below and click &lt;strong&gt;Next&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Project name: &lt;strong&gt;simple_flutter_app&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Flutter SDK Path: &lt;strong&gt;path_to_flutter_sdk&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Project Location: &lt;strong&gt;path_to_project_folder&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Description: &lt;strong&gt;A simple application using Flutter and Android Studio&lt;/strong&gt;
+&lt;img src=&quot;/assets/images/flutter_1.png&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 5.&lt;/strong&gt; Set the company domain as &lt;strong&gt;example.com&lt;/strong&gt; and click &lt;strong&gt;Finish&lt;/strong&gt;.
+&lt;img src=&quot;/assets/images/flutter_2.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now you have a fully working flutter application open in Android Studio. Now we will modify the code to create our application.&lt;/p&gt;
+
+&lt;p&gt;Now lets explore the structure of the application:
+&lt;img src=&quot;/assets/images/flutter_3.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Following is description of some of the files listed in above image:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;android&lt;/strong&gt; − Auto generated source code to create android application&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;ios&lt;/strong&gt; − Auto generated source code to create ios application&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;lib&lt;/strong&gt; − Main folder containing Dart code written using flutter framework&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;lib/main.dart&lt;/strong&gt; − Entry point of the Flutter application. In this application we will modify this file only.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;test&lt;/strong&gt; − Folder containing Dart code to test the flutter application&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;test/widget_test.dart&lt;/strong&gt; − Basic Flutter widget test sample code&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;.gitignore&lt;/strong&gt; − Git version control file. Tells git to ignore the listed files.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;.metadata&lt;/strong&gt; − Auto generated by the flutter tools. Tracks properties of this Flutter project.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;.packages&lt;/strong&gt; − Auto generated to track the flutter packages.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;pubspec.lock&lt;/strong&gt; − Auto generated by the Flutter package manager.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;pubspec.yaml&lt;/strong&gt; − Used by Flutter package manager&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;README.md&lt;/strong&gt; − Project description file written in Markdown format&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;simple_flutter_app.iml&lt;/strong&gt; − project file used by Android studio&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 6.&lt;/strong&gt; Now we have to replace the dart code in &lt;strong&gt;lib/main.dart&lt;/strong&gt; with the following code:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-dart&quot; data-lang=&quot;dart&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:flutter/material.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;runApp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MyApp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyApp&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StatelessWidget&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// This widget is the root of your application.&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@override&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Widget&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BuildContext&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MaterialApp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;title:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Simple Application'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;theme:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ThemeData&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;primarySwatch:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Colors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;home:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MyHomePage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;title:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Title Page'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyHomePage&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StatelessWidget&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;MyHomePage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Key&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;key:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;nd&quot;&gt;@override&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Widget&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BuildContext&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Scaffold&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;appBar:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AppBar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;title:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;body:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Center&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;child:&lt;/span&gt;
+          &lt;span class=&quot;n&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+            &lt;span class=&quot;s&quot;&gt;'Hello World'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 7.&lt;/strong&gt; Now run the app using &lt;strong&gt;Run&lt;/strong&gt; -&amp;gt; &lt;strong&gt;Run main.dart&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;text-center&quot;&gt;
+&lt;img src=&quot;/assets/images/main_dart.jpg&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 8.&lt;/strong&gt; Now you can see the app running:&lt;/p&gt;
+&lt;p class=&quot;text-center&quot;&gt;
+&lt;img src=&quot;/assets/images/simple_flutter_app_screenshot.jpg&quot; alt=&quot;&quot; style=&quot;border:1px solid black;&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You can download the source code of this application from: &lt;a href=&quot;https://github.com/emroline-opensource/Simple-Application-Using-Flutter-and-Android-Studio&quot;&gt;Emroline OpenSource Github repo&lt;/a&gt;&lt;/p&gt;</content><author><name>Emroline</name></author><summary type="html">Here we will create a simple application using Flutter and Android Studio. The link to the source code repo is at the bottom of this page. Following are the required steps: Step 1. Open Android Studio. Step 2. To create Flutter Project click File -&amp;gt; New -&amp;gt; New Flutter Project Step 3. Select Flutter Application and click Next. Step 4. Configure the application as below and click Next: Project name: simple_flutter_app Flutter SDK Path: path_to_flutter_sdk Project Location: path_to_project_folder Description: A simple application using Flutter and Android Studio Step 5. Set the company domain as example.com and click Finish. Now you have a fully working flutter application open in Android Studio. Now we will modify the code to create our application. Now lets explore the structure of the application: Following is description of some of the files listed in above image: android − Auto generated source code to create android application ios − Auto generated source code to create ios application lib − Main folder containing Dart code written using flutter framework lib/main.dart − Entry point of the Flutter application. In this application we will modify this file only. test − Folder containing Dart code to test the flutter application test/widget_test.dart − Basic Flutter widget test sample code .gitignore − Git version control file. Tells git to ignore the listed files. .metadata − Auto generated by the flutter tools. Tracks properties of this Flutter project. .packages − Auto generated to track the flutter packages. pubspec.lock − Auto generated by the Flutter package manager. pubspec.yaml − Used by Flutter package manager README.md − Project description file written in Markdown format simple_flutter_app.iml − project file used by Android studio Step 6. Now we have to replace the dart code in lib/main.dart with the following code: import 'package:flutter/material.dart'; void main() =&amp;gt; runApp(MyApp()); class MyApp extends StatelessWidget { // This widget is the root of your application. @override Widget build(BuildContext context) { return MaterialApp( title: 'Simple Application', theme: ThemeData( primarySwatch: Colors.red, ), home: MyHomePage(title: 'Title Page'), ); } } class MyHomePage extends StatelessWidget { MyHomePage({Key key, this.title}) : super(key: key); final String title; @override Widget build(BuildContext context) { return Scaffold( appBar: AppBar( title: Text(this.title), ), body: Center( child: Text( 'Hello World', ) ), ); } } Step 7. Now run the app using Run -&amp;gt; Run main.dart Step 8. Now you can see the app running: Note: You can download the source code of this application from: Emroline OpenSource Github repo</summary></entry><entry><title type="html">Introduction To Flutter</title><link href="https://www.emroline.com/papers/introduction-to-flutter" rel="alternate" type="text/html" title="Introduction To Flutter" /><published>2020-01-22T00:00:00+05:30</published><updated>2020-01-22T00:00:00+05:30</updated><id>https://www.emroline.com/papers/introduction-to-flutter</id><content type="html" xml:base="https://www.emroline.com/papers/introduction-to-flutter">&lt;p class=&quot;text-center&quot;&gt;
+&lt;img src=&quot;/assets/images/flutter-logo.png&quot; alt=&quot;Flutter Logo&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Generally, if you have to develop a mobile application, its a complex and challenging task. And creating beautiful User Interface is a challenge in itself. Using Flutter you can create beautiful apps for both Android and iOS in one go. once you build an application using flutter it can be deployed on Android as well as iOS.&lt;/p&gt;
+
+&lt;p&gt;Flutter is a simple and high performance framework based on Dart language. It provides high performance by rendering the UI directly in the operating system’s canvas rather than through native framework. Flutter has many ready to use widgets, by combining them in various combinations you can design any kind of UI you desire.&lt;/p&gt;
+
+&lt;h3 id=&quot;features-of-flutter&quot;&gt;Features of Flutter&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Modern and reactive framework.&lt;/li&gt;
+  &lt;li&gt;Very Fast development.&lt;/li&gt;
+  &lt;li&gt;Stateful hot reload.&lt;/li&gt;
+  &lt;li&gt;Lots of ready made widgets.&lt;/li&gt;
+  &lt;li&gt;Natively build application.&lt;/li&gt;
+  &lt;li&gt;Create once and deploy on many platforms (Android, iOS, desktop, web)&lt;/li&gt;
+  &lt;li&gt;Use Dart programming language. Dart is very easy to learn.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;advantages-of-flutter&quot;&gt;Advantages of Flutter&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Flutter is Free and Open Source.&lt;/li&gt;
+  &lt;li&gt;Dart language has a large repository(&lt;a href=&quot;https://pub.dev/&quot;&gt;https://pub.dev/&lt;/a&gt;) of software packages, which you can use to expand the capabilities of your app.&lt;/li&gt;
+  &lt;li&gt;Flutter needs lesser testing. You can write single test for both Android and iOS.&lt;/li&gt;
+  &lt;li&gt;Flutter allows fast development.&lt;/li&gt;
+  &lt;li&gt;Developers need to write a single code base for both Android and iOS. You can build your apps even for desktop and web.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;disadvantages-of-flutter&quot;&gt;Disadvantages of Flutter&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;You need to learn Dart. But practically its not a disadvantage because Dart is very easy. Designing in Dart is much easier and fun.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Emroline</name></author><summary type="html">Generally, if you have to develop a mobile application, its a complex and challenging task. And creating beautiful User Interface is a challenge in itself. Using Flutter you can create beautiful apps for both Android and iOS in one go. once you build an application using flutter it can be deployed on Android as well as iOS. Flutter is a simple and high performance framework based on Dart language. It provides high performance by rendering the UI directly in the operating system’s canvas rather than through native framework. Flutter has many ready to use widgets, by combining them in various combinations you can design any kind of UI you desire. Features of Flutter Modern and reactive framework. Very Fast development. Stateful hot reload. Lots of ready made widgets. Natively build application. Create once and deploy on many platforms (Android, iOS, desktop, web) Use Dart programming language. Dart is very easy to learn. Advantages of Flutter Flutter is Free and Open Source. Dart language has a large repository(https://pub.dev/) of software packages, which you can use to expand the capabilities of your app. Flutter needs lesser testing. You can write single test for both Android and iOS. Flutter allows fast development. Developers need to write a single code base for both Android and iOS. You can build your apps even for desktop and web. Disadvantages of Flutter You need to learn Dart. But practically its not a disadvantage because Dart is very easy. Designing in Dart is much easier and fun.</summary></entry><entry><title type="html">Send Sms From Android Application Using Kotlin</title><link href="https://www.emroline.com/papers/send-sms-from-android-application-using-kotlin" rel="alternate" type="text/html" title="Send Sms From Android Application Using Kotlin" /><published>2020-01-21T00:00:00+05:30</published><updated>2020-01-21T00:00:00+05:30</updated><id>https://www.emroline.com/papers/send-sms-from-android-application-using-kotlin</id><content type="html" xml:base="https://www.emroline.com/papers/send-sms-from-android-application-using-kotlin">&lt;p&gt;There are two ways to send SMS using an android app:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;SmsManager API&lt;/li&gt;
+  &lt;li&gt;Using Built-in SMS application&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Here we will use &lt;code class=&quot;highlighter-rouge&quot;&gt;SmsManager API&lt;/code&gt; to send message from our android application.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-kotlin&quot; data-lang=&quot;kotlin&quot;&gt;&lt;span class=&quot;nc&quot;&gt;SmsManager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getDefault&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sendTextMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;phoneNo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;sms message&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Our application will need &lt;code class=&quot;highlighter-rouge&quot;&gt;SEND_SMS&lt;/code&gt; permission.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;uses-permission&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;android.permission.SEND_SMS&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now follow the following steps to build an android application using which you can send SMS to any number.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Open Android Studio IDE and create new project. Name the project as &lt;code class=&quot;highlighter-rouge&quot;&gt;mySmsApp&lt;/code&gt; under a package name &lt;code class=&quot;highlighter-rouge&quot;&gt;com.example.mysmsapp&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Select Kotlin under language option.&lt;/li&gt;
+  &lt;li&gt;Modify &lt;code class=&quot;highlighter-rouge&quot;&gt;MainActivity.kt&lt;/code&gt; and add the required code to handle sending sms.&lt;/li&gt;
+  &lt;li&gt;Modify &lt;code class=&quot;highlighter-rouge&quot;&gt;activity_main.xml&lt;/code&gt; to add the code for user interface.&lt;/li&gt;
+  &lt;li&gt;Modify &lt;code class=&quot;highlighter-rouge&quot;&gt;AndroidManifest.xml&lt;/code&gt; and add the permissions required.&lt;/li&gt;
+  &lt;li&gt;Run the application and test it on some android device or emulator.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Following is the modified &lt;code class=&quot;highlighter-rouge&quot;&gt;AndroidManifest.xml&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;manifest&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://schemas.android.com/apk/res/android&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;package=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;com.example.mysmsapp&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;uses-permission&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;android.permission.SEND_SMS&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;application&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:allowBackup=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:icon=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@mipmap/ic_launcher&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:label=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@string/app_name&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:roundIcon=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@mipmap/ic_launcher_round&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:supportsRtl=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:theme=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@style/AppTheme&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;activity&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.MainActivity&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;intent-filter&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;android.intent.action.MAIN&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;category&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;android.intent.category.LAUNCHER&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/intent-filter&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/activity&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/application&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/manifest&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Following is the modified &lt;code class=&quot;highlighter-rouge&quot;&gt;activity_main.xml&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;androidx.constraintlayout.widget.ConstraintLayout&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://schemas.android.com/apk/res/android&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;xmlns:app=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://schemas.android.com/apk/res-auto&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;xmlns:tools=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://schemas.android.com/tools&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;match_parent&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;match_parent&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;tools:context=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.MainActivity&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;EditText&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@+id/inputNumber&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;329dp&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wrap_content&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:ems=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;10&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:hint=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Enter Phone no&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:inputType=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;textPersonName&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;app:layout_constraintBottom_toTopOf=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@+id/inputMessage&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;app:layout_constraintEnd_toEndOf=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;parent&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;app:layout_constraintStart_toStartOf=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;parent&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;app:layout_constraintTop_toTopOf=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;parent&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;app:layout_constraintVertical_bias=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0.529&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;EditText&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@+id/inputMessage&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;329dp&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wrap_content&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:layout_marginBottom=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;184dp&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:ems=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;10&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:hint=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Enter text&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:inputType=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;textPersonName&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;app:layout_constraintBottom_toTopOf=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@+id/send_button&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;app:layout_constraintEnd_toEndOf=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;parent&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;app:layout_constraintStart_toStartOf=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;parent&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;Button&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@+id/send_button&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wrap_content&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wrap_content&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:layout_marginBottom=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;256dp&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:text=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;SEND&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;app:layout_constraintBottom_toBottomOf=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;parent&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;app:layout_constraintEnd_toEndOf=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;parent&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;app:layout_constraintHorizontal_bias=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0.498&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;app:layout_constraintStart_toStartOf=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;parent&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/androidx.constraintlayout.widget.ConstraintLayout&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Following is the modified &lt;code class=&quot;highlighter-rouge&quot;&gt;MainActifity.kt&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-kotlin&quot; data-lang=&quot;kotlin&quot;&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;com.example.mysmsapp&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;android.content.pm.PackageManager&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;androidx.appcompat.app.AppCompatActivity&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;android.os.Bundle&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;android.telephony.SmsManager&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;android.widget.EditText&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;android.widget.Toast&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;androidx.core.app.ActivityCompat&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;kotlinx.android.synthetic.main.activity_main.*&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MainActivity&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AppCompatActivity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;requestSendSms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onCreate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Bundle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;onCreate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;nf&quot;&gt;setContentView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;activity_main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;send_button&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setOnClickListener&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ActivityCompat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;checkSelfPermission&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Manifest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;permission&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;SEND_SMS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;PackageManager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;PERMISSION_GRANTED&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+                &lt;span class=&quot;nc&quot;&gt;ActivityCompat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;requestPermissions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;arrayOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Manifest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;permission&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;SEND_SMS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;requestSendSms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;nf&quot;&gt;sendSms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onRequestPermissionsResult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;requestCode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;permissions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;grantResults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;IntArray&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;requestCode&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requestSendSms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sendSms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sendSms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;findViewById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;EditText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inputNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;findViewById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;EditText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inputMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+        &lt;span class=&quot;nc&quot;&gt;SmsManager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getDefault&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sendTextMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;nc&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;makeText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;SMS sent.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Toast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;LENGTH_SHORT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You can download the source code of application from: &lt;a href=&quot;https://github.com/emroline-opensource/android-application-to-send-sms-using-kotlin&quot;&gt;Emroline OpenSource Github repo&lt;/a&gt;&lt;/p&gt;</content><author><name>Emroline</name></author><summary type="html">There are two ways to send SMS using an android app: SmsManager API Using Built-in SMS application Here we will use SmsManager API to send message from our android application. SmsManager.getDefault().sendTextMessage(&quot;phoneNo&quot;, null, &quot;sms message&quot;, null, null) Our application will need SEND_SMS permission. &amp;lt;uses-permission android:name=&quot;android.permission.SEND_SMS&quot;/&amp;gt; Now follow the following steps to build an android application using which you can send SMS to any number. Open Android Studio IDE and create new project. Name the project as mySmsApp under a package name com.example.mysmsapp Select Kotlin under language option. Modify MainActivity.kt and add the required code to handle sending sms. Modify activity_main.xml to add the code for user interface. Modify AndroidManifest.xml and add the permissions required. Run the application and test it on some android device or emulator. Following is the modified AndroidManifest.xml: &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt; &amp;lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; package=&quot;com.example.mysmsapp&quot;&amp;gt; &amp;lt;uses-permission android:name=&quot;android.permission.SEND_SMS&quot;/&amp;gt; &amp;lt;application android:allowBackup=&quot;true&quot; android:icon=&quot;@mipmap/ic_launcher&quot; android:label=&quot;@string/app_name&quot; android:roundIcon=&quot;@mipmap/ic_launcher_round&quot; android:supportsRtl=&quot;true&quot; android:theme=&quot;@style/AppTheme&quot;&amp;gt; &amp;lt;activity android:name=&quot;.MainActivity&quot;&amp;gt; &amp;lt;intent-filter&amp;gt; &amp;lt;action android:name=&quot;android.intent.action.MAIN&quot; /&amp;gt; &amp;lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&amp;gt; &amp;lt;/intent-filter&amp;gt; &amp;lt;/activity&amp;gt; &amp;lt;/application&amp;gt; &amp;lt;/manifest&amp;gt; Following is the modified activity_main.xml: &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt; &amp;lt;androidx.constraintlayout.widget.ConstraintLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot; xmlns:tools=&quot;http://schemas.android.com/tools&quot; android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;match_parent&quot; tools:context=&quot;.MainActivity&quot;&amp;gt; &amp;lt;EditText android:id=&quot;@+id/inputNumber&quot; android:layout_width=&quot;329dp&quot; android:layout_height=&quot;wrap_content&quot; android:ems=&quot;10&quot; android:hint=&quot;Enter Phone no&quot; android:inputType=&quot;textPersonName&quot; app:layout_constraintBottom_toTopOf=&quot;@+id/inputMessage&quot; app:layout_constraintEnd_toEndOf=&quot;parent&quot; app:layout_constraintStart_toStartOf=&quot;parent&quot; app:layout_constraintTop_toTopOf=&quot;parent&quot; app:layout_constraintVertical_bias=&quot;0.529&quot; /&amp;gt; &amp;lt;EditText android:id=&quot;@+id/inputMessage&quot; android:layout_width=&quot;329dp&quot; android:layout_height=&quot;wrap_content&quot; android:layout_marginBottom=&quot;184dp&quot; android:ems=&quot;10&quot; android:hint=&quot;Enter text&quot; android:inputType=&quot;textPersonName&quot; app:layout_constraintBottom_toTopOf=&quot;@+id/send_button&quot; app:layout_constraintEnd_toEndOf=&quot;parent&quot; app:layout_constraintStart_toStartOf=&quot;parent&quot; /&amp;gt; &amp;lt;Button android:id=&quot;@+id/send_button&quot; android:layout_width=&quot;wrap_content&quot; android:layout_height=&quot;wrap_content&quot; android:layout_marginBottom=&quot;256dp&quot; android:text=&quot;SEND&quot; app:layout_constraintBottom_toBottomOf=&quot;parent&quot; app:layout_constraintEnd_toEndOf=&quot;parent&quot; app:layout_constraintHorizontal_bias=&quot;0.498&quot; app:layout_constraintStart_toStartOf=&quot;parent&quot; /&amp;gt; &amp;lt;/androidx.constraintlayout.widget.ConstraintLayout&amp;gt; Following is the modified MainActifity.kt: package com.example.mysmsapp import android.content.pm.PackageManager import androidx.appcompat.app.AppCompatActivity import android.os.Bundle import android.telephony.SmsManager import android.widget.EditText import android.widget.Toast import androidx.core.app.ActivityCompat import kotlinx.android.synthetic.main.activity_main.* class MainActivity : AppCompatActivity() { private val requestSendSms: Int = 2 override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanceState) setContentView(R.layout.activity_main) send_button.setOnClickListener { if(ActivityCompat.checkSelfPermission(this, android.Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED){ ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.SEND_SMS),requestSendSms) }else{ sendSms() } } } override fun onRequestPermissionsResult( requestCode: Int, permissions: Array&amp;lt;out String&amp;gt;, grantResults: IntArray ) { if(requestCode == requestSendSms) sendSms() } private fun sendSms() { val number = findViewById&amp;lt;EditText&amp;gt;(R.id.inputNumber).getText().toString() val message = findViewById&amp;lt;EditText&amp;gt;(R.id.inputMessage).getText().toString() SmsManager.getDefault().sendTextMessage(number,null,message,null,null) Toast.makeText(this,&quot;SMS sent.&quot;, Toast.LENGTH_SHORT).show() } } Note: You can download the source code of application from: Emroline OpenSource Github repo</summary></entry><entry><title type="html">What Is Android</title><link href="https://www.emroline.com/papers/what-is-android" rel="alternate" type="text/html" title="What Is Android" /><published>2020-01-21T00:00:00+05:30</published><updated>2020-01-21T00:00:00+05:30</updated><id>https://www.emroline.com/papers/what-is-android</id><content type="html" xml:base="https://www.emroline.com/papers/what-is-android">&lt;p&gt;Android is an Operating System based on a modified version of Linux Kernel. Android is Open Source. That means developers, designers and device makers everyone can experiment, imagine and create things that world has never seen.&lt;/p&gt;
+
+&lt;p&gt;Android is used in over 3 billion active devices all over the planet. Android has been the best-selling OS worldwide on smartphones since 2011.&lt;/p&gt;
+
+&lt;p&gt;Android offers unified approach to app development means you have to develop your application only once and it will run on all the 3 billion active android devices worldwide.&lt;/p&gt;
+
+&lt;h3 id=&quot;features-of-android&quot;&gt;Features of Android&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Android features a very &lt;strong&gt;Beautiful and Intuitive User Interface&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Various &lt;strong&gt;connectivity&lt;/strong&gt; options are available.&lt;/li&gt;
+  &lt;li&gt;Supports &lt;strong&gt;data storage&lt;/strong&gt; in SQLite lightweight database.&lt;/li&gt;
+  &lt;li&gt;Supports various media formats.&lt;/li&gt;
+  &lt;li&gt;Native support for &lt;strong&gt;Messaging&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Android devices can access &lt;strong&gt;Internet&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Android has native support for &lt;strong&gt;multi-touch&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Android supports &lt;strong&gt;Multi-tasking&lt;/strong&gt;, means various applications can run simultaneously and users can jump between them.&lt;/li&gt;
+  &lt;li&gt;Supports &lt;strong&gt;Multiple languages&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Supports &lt;strong&gt;Camera&lt;/strong&gt;, &lt;strong&gt;Microphone&lt;/strong&gt; and many other hardware devices.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;what-are-android-applications&quot;&gt;What are Android Applications?&lt;/h3&gt;
+
+&lt;p&gt;Softwares running on android devices that users interact with are called applications or apps. Android applications are usually developed Java or Kotlin language using &lt;a href=&quot;https://developer.android.com/studio&quot;&gt;Android Studio&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The most popular app store for android is Google Play Store. Once you have created an app, you can easily release your app on Play Store.&lt;/p&gt;</content><author><name>Emroline</name></author><summary type="html">Android is an Operating System based on a modified version of Linux Kernel. Android is Open Source. That means developers, designers and device makers everyone can experiment, imagine and create things that world has never seen. Android is used in over 3 billion active devices all over the planet. Android has been the best-selling OS worldwide on smartphones since 2011. Android offers unified approach to app development means you have to develop your application only once and it will run on all the 3 billion active android devices worldwide. Features of Android Android features a very Beautiful and Intuitive User Interface. Various connectivity options are available. Supports data storage in SQLite lightweight database. Supports various media formats. Native support for Messaging. Android devices can access Internet. Android has native support for multi-touch. Android supports Multi-tasking, means various applications can run simultaneously and users can jump between them. Supports Multiple languages. Supports Camera, Microphone and many other hardware devices. What are Android Applications? Softwares running on android devices that users interact with are called applications or apps. Android applications are usually developed Java or Kotlin language using Android Studio. The most popular app store for android is Google Play Store. Once you have created an app, you can easily release your app on Play Store.</summary></entry><entry><title type="html">How To Run Jekyll Using Terminal</title><link href="https://www.emroline.com/papers/how-to-run-jekyll-using-terminal" rel="alternate" type="text/html" title="How To Run Jekyll Using Terminal" /><published>2020-01-21T00:00:00+05:30</published><updated>2020-01-21T00:00:00+05:30</updated><id>https://www.emroline.com/papers/how-to-run-jekyll-using-terminal</id><content type="html" xml:base="https://www.emroline.com/papers/how-to-run-jekyll-using-terminal">&lt;p&gt;To build and run your site using Jekyll, first navigate to the site’s direcory, the you can use the following commands.&lt;/p&gt;
+
+&lt;h3 id=&quot;serve&quot;&gt;Serve&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;go&quot;&gt;jekyll serve&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;serve&lt;/code&gt; command builds and stores the build site to &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; directory and runs a local development server at &lt;a href=&quot;http://localhost:4000&quot;&gt;http://localhost:4000&lt;/a&gt; by default. Any changes we make to a site (except edits to _config.yml) trigger the site to rebuild and the development server to refresh. This command is typically used during development.&lt;/p&gt;
+
+&lt;h3 id=&quot;build&quot;&gt;Build&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;go&quot;&gt;jekyll build&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;build&lt;/code&gt; command builds the site to &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; diectory. We can copy the contents of &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; directory to some web hosting provider and our site will come live on internet.&lt;/p&gt;
+
+&lt;h3 id=&quot;runtime-flags&quot;&gt;Runtime flags&lt;/h3&gt;
+&lt;p&gt;Runtime flags are used to modify how the site is build. Following are some of the build runtime flags that you can use:&lt;/p&gt;
+
+&lt;h2 id=&quot;tables&quot;&gt;Tables&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Setting&lt;/th&gt;
+      &lt;th&gt;Flags&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Change the source directory&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-s, --source DIR&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Change the destination directory of &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-d, --destination DIR&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Disable custom plugins and ignore symbolic links.&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--safe&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Automatically regenerate the site when files are modified.&lt;/td&gt;
+      &lt;td&gt;-w, –[no-]watch&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Specify config files instead of using &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; automatically. Settings in later files override settings in earlier files.&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--config FILE1[,FILE2,...]&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Process and render draft posts.&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--drafts&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Change jekyll build environment&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;JEKYLL_ENV=production&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Publish posts or collection documents with a future date.&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--future&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Limit the number of posts to parse and publish.&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Limit the number of posts to parse and publish.&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Print verbose output.&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-V, --verbose&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Silence the normal output from Jekyll during a build.&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-q, --quiet&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Enable the incremental build feature&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-I, --incremental&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Change the host address of running site&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-H, --host HOST&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Change the port of running site&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-P, --port PORT&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Incremental build only re-builds posts and pages that have changed, resulting in significant performance improvements for large sites, but may also break site generation in certain cases.&lt;/p&gt;
+
+&lt;p&gt;Following example shows how to use these flags:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;go&quot;&gt;JEKYLL_ENV=production jekyll build&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;&lt;span class=&quot;go&quot;&gt;JEKYLL_ENV=development jekyll serve --drafts --host 0.0.0.0 --port 8080 --incremental&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>Emroline</name></author><summary type="html">To build and run your site using Jekyll, first navigate to the site’s direcory, the you can use the following commands. Serve jekyll serve serve command builds and stores the build site to _site directory and runs a local development server at http://localhost:4000 by default. Any changes we make to a site (except edits to _config.yml) trigger the site to rebuild and the development server to refresh. This command is typically used during development. Build jekyll build build command builds the site to _site diectory. We can copy the contents of _site directory to some web hosting provider and our site will come live on internet. Runtime flags Runtime flags are used to modify how the site is build. Following are some of the build runtime flags that you can use: Tables Setting Flags   Change the source directory -s, --source DIR   Change the destination directory of _site -d, --destination DIR   Disable custom plugins and ignore symbolic links. --safe   Automatically regenerate the site when files are modified. -w, –[no-]watch   Specify config files instead of using _config.yml automatically. Settings in later files override settings in earlier files. --config FILE1[,FILE2,...]   Process and render draft posts. --drafts   Change jekyll build environment JEKYLL_ENV=production   Publish posts or collection documents with a future date. --future   Limit the number of posts to parse and publish. Limit the number of posts to parse and publish.   Print verbose output. -V, --verbose   Silence the normal output from Jekyll during a build. -q, --quiet   Enable the incremental build feature -I, --incremental   Change the host address of running site -H, --host HOST   Change the port of running site -P, --port PORT   Note: Incremental build only re-builds posts and pages that have changed, resulting in significant performance improvements for large sites, but may also break site generation in certain cases. Following example shows how to use these flags: JEKYLL_ENV=production jekyll build JEKYLL_ENV=development jekyll serve --drafts --host 0.0.0.0 --port 8080 --incremental</summary></entry></feed>
