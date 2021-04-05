@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/aboutus/</loc>
+<loc>/aboutus/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/</loc>
+<loc>/free-worksheets/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/tags/</loc>
+<loc>/</loc>
+</url>
+<url>
+<loc>/tags/</loc>
+</url>
+<url>
+<loc>/free-worksheets/files/grade5-classify-angles-worksheet-emroline.pdf</loc>
+<lastmod>2021-04-05T18:44:52-04:00</lastmod>
 </url>
 </urlset>
